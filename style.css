@@ -1,0 +1,242 @@
+           /* UTILITY */
+           @import url('https://fonts.google.com/specimen/Raleway');
+           @import url('https://fonts.google.com/specimen/Open+Sans');
+           :root{
+               /* Primary colors */
+               --Very-Dark-Blue: hsl(243, 87%, 12%);
+           --Desaturated-Blue: hsl(238, 22%, 44%);
+               /* accent colors */
+               --Bright-Blue: hsl(224, 93%, 58%);
+             --Cyan: hsl(170, 45%, 43%);
+               /* neutral colors */
+               --Light-Grayish-Blue: hsl(240, 75%, 98%);
+           --Light-Gray: hsl(0, 0%, 75%);
+           --form-margins:0.6rem;
+           --primary-margin:1rem;
+           }
+           /* ############################################################################ */
+           
+                       /* BASE */
+                       /* reset */
+           *{
+               padding: 0;
+               margin: 0;
+               box-sizing: border-box;
+           }
+           html{
+               scroll-behavior: smooth;
+           } 
+           body{
+           font-family: 'Open Sans',serif;
+           font-weight: 400;
+           padding: 1.5rem 1.9rem;
+           background-image: url('/images/bg-curve-mobile.svg');
+           }
+           ul{
+               list-style: none;
+           }
+           
+                       /* typography */
+           button{
+               background-color: var(--Bright-Blue);
+               color: var(--Light-Grayish-Blue);
+           }
+           button:hover{
+               opacity: 70%;
+               transition: 0.3s ease;
+               cursor: pointer;
+           
+           }
+           .how_fylo_work a{
+               color: var(--Cyan);
+               
+           }
+           .how_fylo_work a:hover{
+               cursor: pointer;
+               
+           }
+           .main_heading,.illustration-2_heading,.early_access_heading{
+               font-family:'Raleway',serif;
+               font-weight: 700;
+           }
+           .early_access{
+               display: grid;
+               background-color: var(--Desaturated-Blue);
+               color: var(--Light-Gray);
+               padding: 2.2rem 1.6rem;
+            gap: 1.9rem;
+           }
+            footer{
+                display: grid;
+                background-color: var(--Very-Dark-Blue);
+            color: var(--Light-Grayish-Blue);
+            padding: 2.2rem 1.6rem;
+            gap: 30px;
+           }
+           li:hover{
+               color: var(--Bright-Blue);
+               transition: 0.3s ease;
+               cursor: pointer;
+           }
+           footer ul{
+               display: grid;
+               gap: 0.6rem;;
+           }
+               .icon_footer {
+                   filter: brightness(0) invert(1);
+               }
+           
+           .attribution { font-size: 11px; text-align: center; }
+               .attribution a { color: hsl(228, 45%, 44%); }
+           
+           /* ############################################################################ */
+           
+                     /* COMPONENT */
+           .icon_nav{
+               width: 25%;
+               height: 25%;
+           }
+           
+           .illustration_image{
+               width: 100%;
+           }
+           /* .main_form[data-error].main_mail{
+               border: yellow;
+               color: red;
+           }
+           .main_form[data-error].main_mail::after{
+               content: attr(data-error);
+           } */
+            .main_mail{
+           border: 1px solid var(--Very-Dark-Blue);
+           height: 1.88rem;
+           width: 100%;
+           padding: 0.6rem;
+           margin-bottom: var(--form-margins);
+           }
+           
+           .main_button{
+           width: 100%;
+           height: 1.98rem;
+           border: none;
+           }
+           
+            .early_access_mail{
+               width: 100%;
+               padding: 0.4rem;
+           margin-bottom: var(--form-margins);
+               border:none ;    
+           }      
+           .early_access_button{
+           width: 100%;
+           height: 1.88rem;
+           border: none;
+           }
+           
+           /* ############################################################################ */
+           
+                      /* LAYOUT */
+           nav{
+               display: flex;
+               justify-content: space-between;
+           }
+           .list_row{
+               display: flex;
+               gap: 25px; ;
+           }
+           .main_heading,.illustration-2_heading,p{
+               margin-bottom: var(--primary-margin);
+           }
+           .avatar_testimonial_comtainer{
+               position: relative;
+           }
+           .avatar_testimonial{
+               width: 16.875rem;
+               font-size: small;
+               padding: 20px 15px;
+              margin: 40px auto 50px auto;
+           box-shadow: inset 2px 2px var(--Light-Gray),
+           inset -2px -2px var(--Light-Gray);
+           background-image: url('/images/icon-quotes.svg');
+           background-repeat: no-repeat;
+           background-position: 18px 8px;
+           }
+           .avatar{
+               height: 2.5rem;
+               width: 2.5rem;
+               border-radius: 50%;
+               margin-right: 10px;
+           }
+           .profile_container{
+               display: flex;
+           }
+           .profile_container p{
+               margin: 0;
+           }
+           .early_access{
+               display: grid;
+               place-items: center;
+           }
+           .tel::before{
+           content:url('/images/icon-phone.svg');
+           margin-right: 1rem;
+           }
+           .email::before{
+           content:url('/images/icon-email.svg');
+           margin-right: 1rem;
+           }
+           .how_fylo_work{
+               text-align: center;
+           }
+           .how_fylo_work::after{
+               content: url('/images/icon-arrow.svg');
+               margin-left: 0.5rem;
+           }
+           
+           /* ############################################################################ */
+           @media screen and (min-width:480px) {
+           body{
+               background-image: url('/images/bg-curve-desktop.svg');
+           }
+           .icon_nav{
+               width:10% ;
+           }
+               .illustration{ 
+               display:grid;
+               grid-template-columns: repeat(2,1fr);
+               place-items: center;
+           
+               }
+               .main_form{
+                   display: grid;
+                   grid-template-columns: 2fr 1fr;
+                   gap: 1rem;
+               }
+               .illustration_image{
+                   order: 2;
+                   padding-bottom: 60px;
+                   padding-left: 60px;
+               }
+               .avatar_testimonial{
+                   margin-left: 0;
+               }
+               .how_fylo_work{
+                   text-align: left;
+               }
+               .early_access{
+                   display: grid;
+                   /* padding-right: 0; */
+                   grid-template-columns: repeat(2,1fr);
+               }
+              
+               footer{
+                   display: grid;
+                   grid-template-columns: repeat(4,1fr);
+                   justify-content: space-between;
+               }
+               
+               /* footer ul:first-child{
+                   position: absolute;
+                   bottom: 10%;
+               } */
+           }
